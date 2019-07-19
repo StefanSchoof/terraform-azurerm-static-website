@@ -3,7 +3,7 @@ resource "null_resource" "static-website" {
     index    = var.index_document
     notfound = var.notfound_document
     account  = var.storage_account_name
-    enabled = var.enabled
+    enabled  = var.enabled
   }
 
   provisioner "local-exec" {
