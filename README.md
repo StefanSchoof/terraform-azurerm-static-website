@@ -16,7 +16,7 @@ resource "azurerm_resource_group" "testrg" {
 }
 
 resource "azurerm_storage_account" "testsa" {
-  name                = "storageaccountnamessh"
+  name                = "storageaccountname"
   resource_group_name = azurerm_resource_group.testrg.name
   location            = "westus"
 
@@ -26,7 +26,7 @@ resource "azurerm_storage_account" "testsa" {
 }
 
 module "staticweb" {
-  source               = "./terraform-azurerm-static-website"
+  source               = "StefanSchoof/static-website/azurerm"
   storage_account_name = azurerm_storage_account.testsa.name
 }
 
