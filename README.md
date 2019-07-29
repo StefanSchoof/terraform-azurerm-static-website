@@ -6,6 +6,7 @@ A module to enable a static website for an azure storage account. This is a work
 
 1. You need a valid session in the Azure CLI (even when you Authenticating terrafrom not with the Azure CLI)
 2. A destroy does not disable the website. You must first set `enabled` to false and apply. The you can remove the resource
+3. A change outside from terrafrom is not detect and a reapply will not fix this.
 
 ## Example
 
